@@ -1,16 +1,14 @@
-inputString = 'azcbobobegghakl'
-
+string=input()
 prevChar = ""
-currentString = ""
-longestString = ""
+curr_longest = ""
+longest = ""
 
-for char in inputString:
-    if prevChar <= char:
-        currentString += char
-        if len(currentString) > len(longestString):
-            longestString = currentString
+for char in string:
+    if (prevChar.upper()<=char.upper()):
+        curr_longest += char
+        if len(curr_longest) > len(longest):
+            longest= curr_longest
     else:
-        currentString = char
+        curr_longest = char
     prevChar = char
-print('Longest substring in alphabetical order is: ' + longestString )
-input()
+print( longest )
